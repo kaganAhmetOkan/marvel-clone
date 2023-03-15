@@ -1,0 +1,243 @@
+.root {
+    display: block;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    background: rgb(212,15,73);
+    background: linear-gradient(60deg, rgba(212,15,73,1) 0%, rgba(15,140,212,0.5) 50%, rgba(10,10,147,0.5) 100%); 
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    position: relative;
+    padding: 2rem;
+    padding-right: 54px;
+    justify-content: space-around;
+    min-height: calc(100vh - 16px);
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+    width: 400px;
+    flex-shrink: 0;
+}
+
+.return {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px; top: 20px;
+    cursor: pointer;
+    height: 36px;
+    width: 36px;
+    box-shadow: 0 0 5px #ccc;
+    border-radius: 18px;
+}
+
+.returnTop {
+    display: flex;
+    width: 30px;
+    height: 3px;
+    background-color: rgb(0,65,145);
+    transform: translateY(50%) rotate(45deg);
+    transition: 300ms;
+}
+
+.returnBottom {
+    display: flex;
+    width: 30px;
+    height: 3px;
+    background-color: rgb(0,65,145);
+    transform: translateY(-50%) rotate(135deg);
+    transition: 300ms;
+}
+
+.return:hover .returnTop {
+    transform: translateY(50%) rotate(135deg);
+    background-color: #ff1111;
+}
+
+.return:hover .returnBottom {
+    transform: translateY(-50%) rotate(45deg);
+    background-color: #ff1111;
+}
+
+.characterBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 400px;
+    min-height: 700px;
+    padding: 1rem;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    top: 0;
+}
+
+.overflowHidden {
+    display: flex;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.img {
+    display: flex;
+    border-radius: 1rem;
+    width: 300px;
+    height: auto;
+    box-shadow: 0 0 5px #ccc;
+    transition: ease-out 250ms;
+}
+
+.img:hover {
+    transform: scale(1.1);
+}
+
+.rightBox {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    padding: 7rem 0 4rem 0;
+    justify-content: space-between;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+
+}
+
+.button {
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 18px;
+    color: #ff1111;
+    cursor: pointer;
+}
+
+.heroContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    border-bottom: 1px solid #000;
+    cursor: default;
+}
+
+.title {
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(0,65,145);
+    text-align: center;
+    width: 260px;
+}
+
+.paragraph {
+    display: flex;
+    font-size: 20px;
+    text-align: justify;
+    color: #111;
+}
+
+.searchContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.menus {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.menu {
+    display: flex;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    top: 1px;
+}
+
+.searchBox {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 200px;
+    border: 1px solid #ccc;
+}
+
+.comicsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.comics {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 20vw;
+    overflow: auto;
+    border: 1px solid #ccc;
+}
+
+.comic {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding: 4px;
+}
+
+.comic:hover {
+    background-color: #eee;
+}
+
+.comicsTitle {
+    margin: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: rgb(0,65,145);
+}
+
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+        padding: 8px;
+        align-items: center;
+    }
+
+    .characterBox {
+        width: 80vw;
+        border: hidden;
+        box-shadow: none;
+    }
+
+    .img {
+        width: 200px;
+    }
+
+    .return {
+        display: none;
+    }
+
+    .characterBox {
+        position: relative;
+    }
+}

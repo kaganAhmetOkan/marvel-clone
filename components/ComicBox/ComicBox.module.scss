@@ -1,0 +1,37 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: white;
+    justify-content: space-between;
+    transition: 200ms;
+}
+
+.title {
+    display: flex;
+    text-align: center;
+    padding: 1rem;
+}
+
+.imageContainer {
+    display: flex;
+    overflow: hidden;
+    border-radius: 0 0 12px 12px;
+}
+
+.image {
+    transition: ease-in-out 200ms;
+    padding: 0 1px;
+}
+
+.main:hover .image {
+    transform: scale(1.1);
+}
+
+.main:hover {
+    background-color: #ccc;
+}

@@ -1,0 +1,47 @@
+.root {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+}
+
+.search {
+    display: flex;
+    background-color: rgba(0,0,0,0);
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-right: hidden;
+    transition: 200ms;
+    padding: 0 1rem;
+    border-radius: 20px 0 0 20px;
+}
+
+.search:focus {
+    outline: none;
+    border: 1px solid #004191;
+    border-right: hidden;
+}
+
+.submit {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 15px;
+    border-radius: 0 20px 20px 0;
+    border: hidden;
+    cursor: pointer;
+    background-color: rgb(0,65,145);
+    transition: ease-in 100ms;
+}
+
+@media (max-width: 700px) {
+    
+    .search {
+        padding: 0 10px;
+    }
+}
