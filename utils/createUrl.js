@@ -18,6 +18,7 @@ const createUrl = ({nameStartsWith, offset, id, type}) => {
 
     if (nameStartsWith) url.searchParams.set("nameStartsWith", nameStartsWith);
     if (offset) url.searchParams.set("offset", offset);
+    url.searchParams.set("limit", 100);
 
     return url;
 }
