@@ -44,7 +44,7 @@ export default function Home() {
     const loadMore = useCallback(() => {
         if (!searched) {
             offset.current++;
-            getData("", offset.current * 48);
+            getData("", offset.current * 100);
         }
     }, [getData, offset, searched])
 
